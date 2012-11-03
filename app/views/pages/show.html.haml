@@ -1,0 +1,35 @@
+%top
+  %table
+    %tr
+      %td
+        #logo
+          %a{ :href => @site_title}
+            %img{ :src => '/images/' + @site_logo}
+      %td
+        #contact_us
+          = super_simple_format @site_contact_us
+    %tr
+      %td{ :colspan=>2 }
+        #top_nav_links
+          = super_simple_format @page.top_nav_links
+    %tr
+      %td{ :style=>"width:600px"}
+        #main
+          #main_area_1
+            = super_simple_format @page.main_area_1
+          #main_area_2
+            = super_simple_format @page.main_area_2
+          #main_area_3
+            = super_simple_format @page.main_area_3
+      %td{ :style=>"width:250px"}
+        #side
+          #side_area_1
+            = super_simple_format @page.side_area_1
+          #side_area_2
+            = super_simple_format @page.side_area_2
+          #side_area_3
+            = super_simple_format @page.side_area_3
+
+= link_to 'Edit', edit_page_path(@page)
+\|
+= link_to 'Back', pages_path

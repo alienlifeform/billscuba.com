@@ -1,0 +1,35 @@
+%h1 Listing pages
+
+%table
+  %tr
+    %th Title
+    %th Top nav links
+    %th Main area 1
+    %th Main area 2
+    %th Main area 3
+    %th Side area 1
+    %th Side area 2
+    %th Side area 3
+    %th Template
+    %th
+    %th
+    %th
+
+  - @pages.each do |page|
+    %tr
+      %td= page.title
+      %td= page.top_nav_links
+      %td= page.main_area_1
+      %td= page.main_area_2
+      %td= page.main_area_3
+      %td= page.side_area_1
+      %td= page.side_area_2
+      %td= page.side_area_3
+      %td= page.template
+      %td= link_to 'Show', page
+      %td= link_to 'Edit', edit_page_path(page)
+      %td= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Page', new_page_path

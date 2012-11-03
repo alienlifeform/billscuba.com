@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  top_nav_links: MyText
+  main_area_1: MyText
+  main_area_2: MyText
+  main_area_3: MyText
+  side_area_1: MyText
+  side_area_2: MyText
+  side_area_3: MyText
+  template: MyString
+
+two:
+  title: MyString
+  top_nav_links: MyText
+  main_area_1: MyText
+  main_area_2: MyText
+  main_area_3: MyText
+  side_area_1: MyText
+  side_area_2: MyText
+  side_area_3: MyText
+  template: MyString

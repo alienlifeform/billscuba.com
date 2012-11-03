@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @location.title
+%p
+  %b Short desc:
+  = @location.short_desc
+%p
+  %b Long desc:
+  = @location.long_desc
+%p
+  %b City:
+  = @location.city
+%p
+  %b Region:
+  = @location.region
+%p
+  %b Country:
+  = @location.country
+%p
+  %b Geography:
+  = @location.geography
+%p
+  %b Population:
+  = @location.population
+%p
+  %b Image 1:
+  = @location.image_1
+%p
+  %b Image 2:
+  = @location.image_2
+
+= link_to 'Edit', edit_location_path(@location)
+\|
+= link_to 'Back', locations_path

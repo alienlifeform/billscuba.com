@@ -1,0 +1,22 @@
+= form_for @site_config do |f|
+  - if @site_config.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@site_config.errors.count, "error")} prohibited this site_config from being saved:"
+      %ul
+        - @site_config.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :desc
+    = f.text_area :desc
+  .field
+    = f.label :logo
+    = f.text_field :logo
+  .field
+    = f.label :contact_us_blurb
+    = f.text_area :contact_us_blurb
+  .actions
+    = f.submit 'Save'

@@ -7,7 +7,7 @@ BillscubaCom::Application.routes.draw do
 
   resources :pages
 
-  match "(/index)", :controller => "page", :action => "show", :id => 1
+  match "/", :controller => "pages", :action => "show", :id => 1
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

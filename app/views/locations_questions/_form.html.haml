@@ -1,0 +1,19 @@
+= form_for @locations_question do |f|
+  - if @locations_question.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@locations_question.errors.count, "error")} prohibited this locations_question from being saved:"
+      %ul
+        - @locations_question.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :location_id
+    = f.text_field :location_id
+  .field
+    = f.label :question_id
+    = f.text_field :question_id
+  .field
+    = f.label :value
+    = f.number_field :value
+  .actions
+    = f.submit 'Save'

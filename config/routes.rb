@@ -1,4 +1,6 @@
 BillscubaCom::Application.routes.draw do
+  resources :locations_questions
+
   resources :questions
 
   resources :locations

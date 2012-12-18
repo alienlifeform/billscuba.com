@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+#gem 'pg'
 gem 'haml'
 gem 'haml-rails'
 
@@ -9,6 +10,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'seed_dump'
 
 
 # Gems used only for assets and not required

@@ -41,6 +41,7 @@ class FactorsUsersController < ApplicationController
     end    
 
     @user_id = User.last.id
+    #@last_factors_user_id = FactorsUser.last.id
 
     respond_to do |format|
       format.html # new.html.erb
@@ -51,6 +52,7 @@ class FactorsUsersController < ApplicationController
   # GET /factors_users/1/edit
   def edit
     @factors_user = FactorsUser.find(params[:id])
+    #@last_factors_user_id = FactorsUser.last.id
   end
 
   # POST /factors_users

@@ -19,8 +19,18 @@
         = f.label :user_id
         = f.select :user_id, options_for_select(users_for_select(), @user_id),{}
       .field
-        = f.label :value
-        = f.number_field :value
+        =# f.label :value
+        =# f.number_field :value
+        =# f.radio :value
+        = label_tag(:value_1, "No")
+        = f.radio_button(:value, 1)
+        = f.radio_button(:value, 2)
+        = f.radio_button(:value, 3)
+        = f.radio_button(:value, 4)
+        = f.radio_button(:value, 5)
+        = f.radio_button(:value, 6)
+        = f.radio_button(:value, 7)
+        = label_tag(:value_7, "Yes")
       .field
         = f.label :description
         = f.text_area :description

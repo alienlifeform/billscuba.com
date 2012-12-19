@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218174236) do
+ActiveRecord::Schema.define(:version => 20121219074736) do
+
+  create_table "factors", :force => true do |t|
+    t.string   "title"
+    t.string   "style"
+    t.boolean  "show_in_survey"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "factors_locations", :force => true do |t|
+    t.integer  "factor_id"
+    t.integer  "location_id"
+    t.integer  "value"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "factors_users", :force => true do |t|
+    t.integer  "factor_id"
+    t.integer  "user_id"
+    t.integer  "value"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "locations", :force => true do |t|
     t.string   "title"
@@ -24,16 +50,29 @@ ActiveRecord::Schema.define(:version => 20121218174236) do
     t.string   "population"
     t.string   "image_1"
     t.string   "image_2"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "locations_questions", :force => true do |t|
-    t.integer  "location_id"
-    t.integer  "question_id"
-    t.integer  "value"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+    t.text     "activities"
+    t.text     "distance_to_hospital"
+    t.text     "distance_to_airport"
+    t.text     "internet_speed"
+    t.text     "climate"
+    t.text     "amenities"
+    t.text     "expat_population"
+    t.text     "health_care"
+    t.text     "distance_to_international_school"
+    t.text     "kids_friendliness"
+    t.text     "quaintness"
+    t.text     "interesting_activities_events"
+    t.text     "liberal_or_conservative"
+    t.text     "same_sex_friendly"
+    t.text     "religions"
+    t.text     "nightlife"
+    t.text     "distance_to_nightlife"
+    t.integer  "nightlife_index"
+    t.text     "province"
+    t.text     "elevation"
+    t.text     "distance_to_city"
   end
 
   create_table "pages", :force => true do |t|
@@ -50,16 +89,6 @@ ActiveRecord::Schema.define(:version => 20121218174236) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "questions", :force => true do |t|
-    t.string   "title"
-    t.string   "subtitle"
-    t.string   "option_label"
-    t.string   "option_value"
-    t.string   "style"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
   create_table "site_configs", :force => true do |t|
     t.string   "title"
     t.text     "desc"
@@ -69,6 +98,14 @@ ActiveRecord::Schema.define(:version => 20121218174236) do
     t.datetime "updated_at",       :null => false
     t.text     "top_nav_links"
     t.text     "footer_links"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

@@ -1,5 +1,34 @@
 module ApplicationHelper
 
+
+  def factors_for_select
+    ary = []
+    Factor.all.collect { |item| 
+        label = item.title
+        ary.push([label, item.id.to_s])
+      }
+    ary
+  end
+  def locations_for_select
+    ary = []
+    Location.all.collect { |item| 
+        label = item.title
+        ary.push([label, item.id.to_s])
+      }
+    ary
+  end
+  def users_for_select
+    ary = []
+    User.all.collect { |item| 
+        label = item.email
+        ary.push([label, item.id.to_s])
+      }
+    ary
+  end
+  def styles_for_select
+    [['range'],['single-select'],['multi-select']]
+  end
+
   # super_simple_format 
   #
   # based on Ruby simple_format:

@@ -1,0 +1,64 @@
+/* ----- RESET ----- */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;} body {	/* line-height: 1; */} ol, ul {	list-style: none;} blockquote, q {	quotes: none;} blockquote:before, blockquote:after,q:before, q:after {	content: ''; content: none;} :focus {	outline: 0;} ins {	text-decoration: none;} del {	text-decoration: line-through;} table {	border-collapse: collapse; border-spacing: 0;} dd:after, div:after, .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;} div, .clearfix { display: inline-block; } * html div, * html .clearfix { height: 1%; } div, .clearfix, .clear { display: block; } .clear, body .content .clear, body div .content .clear {clear:both;}
+
+
+
+/* ----- GLOBAL ----- */
+.clear { clear: both; } /* use after floats so that they are contained in wrapper div */  
+body { height: 100%; text-align: center; background: #fadf7f url('/assets/images/public/blog/wrapper/blog_background.gif') no-repeat 50% 0%; color: #2c2f3d; font-family: Helvetica, Arial, sans-serif; }
+p { line-height: 1.3em; margin-bottom: 12px; color: #333B49;}
+/* lines */
+div.hr { height: 1px; background: #7F9756 url(/assets/images/admin/hr.gif) no-repeat scroll center; margin-bottom: 16px; }
+div.hr hr { display: none; }
+.left { float: left; }
+.right { float: right; } 
+a { color: #4C6C91 } 
+
+
+
+/* ----- TOP BANNER ----- */
+#wrapper_top { width: 1001px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */ margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */ text-align: left; margin-top: 12px; margin-bottom: 6px; }
+#top { padding: 0; height: 77px; /*background: url('/assets/images/public/blog/wrapper/nasaBlogBanner.jpg');*/ }  
+
+
+
+/* ----- SECOND BANNER ----- */
+#wrapper_header_2 { position: relative; width: 1001px; ;
+/*border: 2px solid #1d2a54; border-bottom: 2px;*/ margin: 0 auto; height: 130px; outline: none; }
+
+
+
+/* ----- MAIN BODY AREA ----- */ 
+#wrapper_middle_2 { width: 1001px; margin: 0 auto 6px auto; text-align: left; padding: 0;}
+#middle_2_border { width: 997px; padding: 0; border: 2px solid #385527; background:#32591e url('/assets/images/public/blog/wrapper/blogNavGradient.jpg') no-repeat; margin: 0; float: left; } 
+#main_area { float: left; padding: 10px 25px 25px 25px; margin-bottom: 0; background: white; width: 771px; height: auto;  }
+
+
+
+/* ----- LEFT COLUMN ----- */
+#left_column { float: left; width: 150px; height: 100%; padding: 0 13px 0 13px; overflow: hidden; }
+.left_column_bio { width: 150px; height: auto; overflow: hidden; }
+.left_column_bio img { width: 150px; margin-bottom: 8px; }
+.left_column_bio p, .left_column_bio a { font-size: 9pt; color: #eddb85; margin-bottom: 8px; }
+.left_column_bio a { text-decoration: none; } 
+.left_column_bio a:hover { text-decoration: underline; }
+
+
+
+/* ----- FOOTER ----- */
+#wrapper_bottom { width: 1001px; margin: 0 auto; }
+#footer { padding: 0; margin: 0 auto 10px auto; background-color: #223E23; height: 90px; color: #B0AFAD; position: relative; font-size: 10pt; line-height: 1.3em; } 
+#footer a { text-decoration: none; color: #B0AFAD; } 
+#footer a:hover { color: white; } 
+#footer #footer_left { position: absolute; top: 10px; left: 2px; }
+#footer #footer_center { position: absolute; top: 10px; left: 220px; text-align: center; }
+#footer #footer_right { position: relative; float: right; padding: 12px 20px 0 0; text-align: left; }
+#footer #jpl_title { font-weight: bold; font-size: 11pt; }
+#footer ul.bottom_links { text-align: center; left: 0; top: 65px; position: absolute; width: 100%; }
+#footer ul.bottom_links li { margin-right: 5px; color: #FADF7F; display: inline; }
+#footer ul.bottom_links a { color: #FADF7F; } 
+#footer ul.bottom_links a:hover { color: white; }
+
+
+
+

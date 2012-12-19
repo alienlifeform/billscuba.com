@@ -1,36 +1,162 @@
+%h1 
+  = @location.title.present? ? @location.title : @location.city
+  
 %p#notice= notice
 
-%p
-  %b Title:
-  = @location.title
-%p
-  %b Short desc:
-  = @location.short_desc
-%p
-  %b Long desc:
-  = @location.long_desc
-%p
-  %b City:
-  = @location.city
-%p
-  %b Region:
-  = @location.region
-%p
-  %b Country:
-  = @location.country
-%p
-  %b Geography:
-  = @location.geography
-%p
-  %b Population:
-  = @location.population
-%p
-  %b Image 1:
-  = @location.image_1
-%p
-  %b Image 2:
-  = @location.image_2
+#show_cols
+  #col_1_of_3
+    .field
+      %p
+        %b title
+        = @location.title
+      
+    .field
+      %p
+        %b short_desc
+        = @location.short_desc
+      
+    .field
+      %p
+        %b long_desc
+        = @location.long_desc
+      
+    .field
+      %p
+        %b image_1
+        = @location.image_1
+      
+    .field
+      %p
+        %b image_2
+        = @location.image_2
+      
+  #col_2_of_3
+    .field
+      %p
+        %b city
+        = @location.city
+      
+    .field
+      %p
+        %b province
+        = @location.province
+      
+    .field
+      %p
+        %b region
+        = @location.region
+      
+    .field
+      %p
+        %b population
+        = @location.population
+      
+    .field
+      %p
+        %b elevation
+        = @location.elevation
+      
+    / .field
+    /   = @location.geography
+    /   
+    .field
+      %p
+        %b activities
+        = @location.activities
+      
+    .field
+      %p
+        %b distance_to_hospital
+        = @location.distance_to_hospital
+      
+    .field
+      %p
+        %b distance_to_city
+        = @location.distance_to_city
+      
+    .field
+      %p
+        %b distance_to_airport
+        = @location.distance_to_airport
+      
+    .field
+      %p
+        %b internet_speed
+        = @location.internet_speed
+      
+    .field
+      %p
+        %b climate
+        = @location.climate
+      
+    .field
+      %p
+        %b amenities
+        = @location.amenities
+      
+  #col_3_of_3
+    .field
+      %p
+        %b expat_population
+        = @location.expat_population
+      
+    .field
+      %p
+        %b health_care
+        = @location.health_care
+      
+    .field
+      %p
+        %b distance_to_international_school
+        = @location.distance_to_international_school
+      
+    .field
+      %p
+        %b kids_friendliness
+        = @location.kids_friendliness
+      
+    .field
+      %p
+        %b quaintness
+        = @location.quaintness
+      
+    .field
+      %p
+        %b interesting_activities_events
+        = @location.interesting_activities_events
+      
+    .field
+      %p
+        %b liberal_or_conservative
+        = @location.liberal_or_conservative
+      
+    .field
+      %p
+        %b same_sex_friendly
+        = @location.same_sex_friendly
+      
+    .field
+      %p
+        %b religions
+        = @location.religions
+      
+    .field
+      %p
+        %b nightlife
+        = @location.nightlife
+      
+    .field
+      %p
+        %b distance_to_nightlife
+        = @location.distance_to_nightlife
+      
+    .field
+      %p
+        %b nightlife_index
+        = @location.nightlife_index
+      
 
 = link_to 'Edit', edit_location_path(@location)
 \|
 = link_to 'Back', locations_path
+  

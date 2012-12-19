@@ -1,0 +1,26 @@
+/*------------------------------------
+	Title: Cross-Browser Text Drop Shadows
+	Author: Scott Jehl, www.scottjehl.com, scott@scottjehl.com
+	Date: 7/19/06
+	http://creativecommons.org/licenses/by-nc-sa/2.5/
+--------------------------------------*/
+
+/*Appearance of Drop Shadow Text*/
+span.shadow {
+	top: -2px;
+	left: -2px;
+	color: #aaaaaa;
+}
+
+/*necessities*/
+.highContrast {
+	position: relative;
+}
+.highContrast span {
+	position: relative;
+}
+span.shadow {
+	position: absolute;
+}	
+
+

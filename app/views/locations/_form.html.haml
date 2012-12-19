@@ -1,4 +1,8 @@
 = form_for @location do |f|
+  .actions
+    = f.submit 'Save'
+  %hr
+
   - if @location.errors.any?
     #error_explanation
       %h2= "#{pluralize(@location.errors.count, "error")} prohibited this location from being saved:"
@@ -6,35 +10,98 @@
         - @location.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :short_desc
-    = f.text_area :short_desc
-  .field
-    = f.label :long_desc
-    = f.text_area :long_desc
-  .field
-    = f.label :city
-    = f.text_field :city
-  .field
-    = f.label :region
-    = f.text_field :region
-  .field
-    = f.label :country
-    = f.text_field :country
-  .field
-    = f.label :geography
-    = f.text_field :geography
-  .field
-    = f.label :population
-    = f.text_field :population
-  .field
-    = f.label :image_1
-    = f.text_field :image_1
-  .field
-    = f.label :image_2
-    = f.text_field :image_2
-  .actions
-    = f.submit 'Save'
+  #edit_cols
+    #col_1_of_3
+      .field
+        = f.label :title
+        = f.text_field :title
+      .field
+        = f.label :short_desc
+        = f.text_area :short_desc
+      .field
+        = f.label :long_desc
+        = f.text_area :long_desc
+      .field
+        = f.label :image_1
+        = f.text_field :image_1
+      .field
+        = f.label :image_2
+        = f.text_field :image_2
+    #col_2_of_3
+      .field
+        = f.label :city
+        = f.text_field :city
+      .field
+        = f.label :province
+        = f.text_field :province
+      .field
+        = f.label :region
+        = f.text_field :region
+      .field
+        = f.label :population
+        = f.text_field :population
+      .field
+        = f.label :elevation
+        = f.text_field :elevation
+      / .field
+      /   = f.label :geography
+      /   = f.text_field :geography
+      .field
+        = f.label :activities
+        = f.text_field :activities
+      .field
+        = f.label :distance_to_hospital
+        = f.text_field :distance_to_hospital
+      .field
+        = f.label :distance_to_city
+        = f.text_field :distance_to_city
+      .field
+        = f.label :distance_to_airport
+        = f.text_field :distance_to_airport
+      .field
+        = f.label :internet_speed
+        = f.text_field :internet_speed
+      .field
+        = f.label :climate
+        = f.text_field :climate
+      .field
+        = f.label :amenities
+        = f.text_field :amenities
+    #col_3_of_3
+      .field
+        = f.label :expat_population
+        = f.text_field :expat_population
+      .field
+        = f.label :health_care
+        = f.text_field :health_care
+      .field
+        = f.label :distance_to_international_school
+        = f.text_field :distance_to_international_school
+      .field
+        = f.label :kids_friendliness
+        = f.text_field :kids_friendliness
+      .field
+        = f.label :quaintness
+        = f.text_field :quaintness
+      .field
+        = f.label :interesting_activities_events
+        = f.text_field :interesting_activities_events
+      .field
+        = f.label :liberal_or_conservative
+        = f.text_field :liberal_or_conservative
+      .field
+        = f.label :same_sex_friendly
+        = f.text_field :same_sex_friendly
+      .field
+        = f.label :religions
+        = f.text_field :religions
+      .field
+        = f.label :nightlife
+        = f.text_field :nightlife
+      .field
+        = f.label :distance_to_nightlife
+        = f.text_field :distance_to_nightlife
+      .field
+        = f.label :nightlife_index
+        = f.text_field :nightlife_index
+  

@@ -1,0 +1,26 @@
+/* ----- HOME PAGE - SPECIFIC ----- */
+
+/* ----- Home Top Story----- */
+#home_center_top_area_mobile {
+  margin-bottom: 6px; border: 2px solid #415268;
+}
+#ms_content { background-color: #222; padding: 0;}
+.ms_text { padding: 8px 0 2px 5px; margin: 4px 10px 0 10px; }
+.ms_title { font-size: 1.1em; margin-bottom: .4em; color: #E8E8E8; }
+.ms_description { font-size: .9em; color: #ccc; }
+/* Top story controls */
+ul#ms_controls { max-width: 98%; margin: 0 10px 8px 10px; }
+ul#ms_controls li.play_btn { display: none; float: left; }
+ul#ms_controls li.pause_btn { float: left; }
+ul#ms_controls li.num_btn { float: right; margin-left: .6em; }
+ul#ms_controls li a { display: block; text-align: center; color: #b1b1b1; text-decoration: none; background-color: #444; padding: .4em .6em; font-size: 1.3em;
+	-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
+}
+ul#ms_controls li.active a { background-color: #b5b5b5; color: #555; }
+ul#ms_controls li.pause_btn a, ul#ms_controls li.play_btn a { /*background-color: #222;*/ padding: .3em .5em;}
+div.pause_image { background: transparent url("/assets/images/mobile/mobile_sprite.png") 0 0; width: 20px; height: 24px; }
+div.play_image { background: transparent url("/assets/images/mobile/mobile_sprite.png") -20px 0; width: 20px; height: 24px; }
+#ms_content a { text-decoration: none;}
+
+
+/* ----- end Home Top Story ----- */

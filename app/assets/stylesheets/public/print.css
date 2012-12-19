@@ -1,0 +1,8 @@
+#middle_2_border,#wrapper_header_2,#wrapper_top,
+#footer, .fb-comments, #wrapper_header_mobile,
+#content_share_tools {
+	display : none !important;
+}
+
+* {	font-family: Helvetica, Arial, sans-serif; }
+#middle_3_border { float: left; }

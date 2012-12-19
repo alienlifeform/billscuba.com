@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+	
+/* ----- CSS RESET -------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: seperate;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* ----- end CSS RESET -------- */
+
+
+
+/* ------------ RESPONSIVE ------------- */
+
+.show_on_small { display: none; }
+.show_on_ipad { display: none; }
+
+/* ----- end RESPONSIVE ---------------- */
+
+ 
+ 
+ 
+/* ----- FOR TESTING ----- */
+
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown li.disable a { background-color: #929292 !important; color: #CACACA !important; pointer-events: none; cursor: default; }
+
+/* ----- end FOR TESTING ----- */
+
+
+
+
+/* ***** PRESENTATION STYLES ***** */
+
+body { height: 100%; text-align: center; background: #3E6083 url('/assets/images/public/wrapper/bg.jpg') no-repeat 50% 0%; color: #5C6063; font-family: Helvetica, Arial, sans-serif; }
+
+.clear { clear: both; } /* use after floats so that they are contained in wrapper div */
+
+.form_field { font-size: .7em; background-color: #213e59; border: 1px solid #687b8e; color: #FFFFFF; } 
+
+/* Top NASA banner */
+#wrapper_top { width: 1001px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */ margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */ text-align: left; margin-top: 12px; margin-bottom: 6px; }
+#top { padding: 0;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */ height: 78px; }
+
+/* nav teir 0 (NASA etc.). Using invisible hovered links over bg */
+#nav_tier_0 a { position: absolute; text-decoration: none; }
+#nav_tier_0 i, #nav_tier_0 .i { visibility: hidden; }
+/* a#nasa { margin-top: 5px; margin-left: 10px; width: 85px; height: 80px; } */
+/* end nav tier 0 */
+
+
+/* HEADER 2 (mission-specific banner) */
+#wrapper_header_2, #wrapper_header_2_home, #wrapper_header_2_home_static { position: relative; width: 1001px; /*border: 2px solid #1d2a54; border-bottom: 2px;*/ margin: 0 auto; height: 115px; outline: none; }
+#wrapper_header_2_home { background: transparent; height: 159px; margin-bottom: 6px; z-index: 999; width: 100%; overflow: hidden; }
+#wrapper_header_2_home_static { background: url('/images/home_static_header.jpg') no-repeat; width: 1001px; height: 159px; margin-bottom: 6px; }
+
+
+/* Had to set a background color with opacity to 0 for IE to work  background-color: #F00; opacity: 0; filter: alpha(opacity=0); /* for ie */
+/* end header 2 */
+
+#wrapper_middle_2 { width: 1001px; margin: 0 auto 6px auto; text-align: left; padding: 0; } 
+
+
+
+/* ----- nav_tier_3 (main navigation) ----- */    
+
+/* container for  nav_tier_3*/
+#middle_2_border { width: 205px; padding: 0; border: 2px solid #415268; background-color:#415268; margin: 0px 6px 0 0; float: left; }
+
+#nav_tier_3 { width: 205px; margin: 0; padding: 0; position: relative; text-align: left; } 
+#nav_tier_3 ul#tier_3 { list-style: none; margin: 0; padding: 0; height: 100%; }
+#nav_tier_3 ul#tier_3 li { position: relative; float: left; width: 100%; margin-bottom: 1px; font-size: 9pt; font-weight: bold; background-color: #5e8ab7; } 
+
+#nav_tier_3 ul#tier_3 li a.left_nav_btn.red { color: white; background-color: #D94F34; }
+#nav_tier_3 ul#tier_3 li a.left_nav_btn.red:hover { color: white; background-color: #D94F34; }  
+#nav_tier_3 ul#tier_3 li a.left_nav_btn, #nav_tier_3 ul#tier_3 li ul.tier_3_dropdown li a  { display: block; text-indent: 6px; padding: 10px 4px 8px; text-decoration: none; }
+#nav_tier_3 ul#tier_3 li a.left_nav_btn.dark { color: #E9F4F7; background-color: #5e8ab7; }
+#nav_tier_3 ul#tier_3 li a.left_nav_btn.dark:hover, #nav_tier_3 ul#tier_3 li a.left_nav_btn.light:hover, #nav_tier_3 ul#tier_3 li a.left_nav_btn.inverse:hover { 
+  color: #153f50; background-color: #b5cee6; text-decoration: none; 
+}
+#nav_tier_3 ul#tier_3 li a.left_nav_btn.light { color: #E9F4F7; background-color: #6FA5D3; }
+#nav_tier_3 ul#tier_3 li a.left_nav_btn.inverse { color: #253f5a; background-color: #81bce6; }
+
+/* Dropdown menu */
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown { 
+  z-index: 20; position: absolute; left:-9999px; top: -2px; background: #415268; list-style: none; padding: 2px 2px 1px 1px; min-width: 180px; 
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); -khtml-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+  }
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown.red { background: #7a382b;} 
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown li { margin: 0 12px 1px 0; float: none;}
+/* Maintain persistent hover state */
+#nav_tier_3 ul#tier_3 li:hover a.left_nav_btn.light, #nav_tier_3 ul#tier_3 li:hover a.left_nav_btn.dark, #nav_tier_3 ul#tier_3 li:hover a.left_nav_btn.inverse, #nav_tier_3 ul#tier_3 li a.left_nav_btn.active { color: #0e303d; background-color: #e4f1fc; } 
+#nav_tier_3 ul#tier_3 li:hover a.left_nav_btn.red { color: #D94F34; background-color: white; }
+/**/   
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown li a { white-space: nowrap; color: #153f50; background-color: #b5cee6; } 
+
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown li a:hover { white-space: nowrap; color: #0e303d; background-color: #e4f1fc; }
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown.red li a { white-space: nowrap; color: #FFF; background-color: #D94F34; }   
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown.red li a:hover { white-space: nowrap; color: #D94F34; background-color: #FFF; }  
+#nav_tier_3 ul#tier_3 li:hover ul.tier_3_dropdown { left: 205px; }
+
+/* Search */
+#nav_tier_3 ul#tier_3 li#search_area { float: left; width: 205px; height: 29px; overflow: hidden; padding: 0 0 10px 0; margin-bottom: 1px; }
+#nav_tier_3 ul#tier_3 li#search_area  fieldset.search { background-color: #5e8ab7; border: none; height: 23px; padding: 10px 0 0 8px; }
+#nav_tier_3 ul#tier_3 li#search_area .search input, #nav_tier_3 ul#tier_3 li#search_area .search button { border: none; float: left; }
+#nav_tier_3 ul#tier_3 li#search_area .search input.box { 
+  background: #5e8ab7 url(/assets/images/public/wrapper/search-box.png) top left no-repeat;
+  float: left; color: #1d2a54; font-size: 9pt; width: 130px; height: 19px; overflow: hidden; padding: 0 0 0 24px; margin-right: 5px; outline: none; 
+}
+#nav_tier_3 ul#tier_3 li#search_area .search input.box:focus, #nav_tier_3 ul#tier_3 li#search_area .search input.focused { 
+  background-position: bottom left; outline: none; 
+}
+#nav_tier_3 ul#tier_3 li#search_area .search button.btn {  
+  background: #5e8ab7 url(/assets/images/public/wrapper/search-btn.png) 0px 0px no-repeat; text-indent: -9999px; 
+  /*background: #5e8ab7;*/ width: 21px; height: 12px; overflow: hidden; color: #cad1ef; font-size: 9pt; padding: 0; margin-top: 4px; cursor: pointer; 
+}
+#nav_tier_3 ul#tier_3 li#search_area .search button.btn:hover { background: url(/assets/images/public/wrapper/search-btn.png) 0px -12px; }
+#nav_tier_3 ul#tier_3 li#search_area .search button.btn:hover { background-color: #5e8ab7; background-position: bottom left; } 
+#nav_tier_3 ul#tier_3 li#search_area ::-webkit-input-placeholder { color: #3d5a78; }
+#nav_tier_3 ul#tier_3 li#search_area :-moz-placeholder { color: #3d5a78; }
+
+/* bottom area */
+#nav_tier_3 #left_nav_bottom_area { float: left; width: 100%; margin: 0; padding-bottom: 24px; background-color: #5e8ab7; }
+#nav_tier_3 #left_nav_bottom_area img { margin: 20px 0 0 9px; }
+
+
+
+/* ----- end nav_tier_3 (main navigation) ----- */
+
+
+
+
+
+/* main content area - inner pages */
+#middle_3_border { float: right; width: 782px; /*padding: 0 18px;*/ padding: 0; border: 2px solid #415268; background-color:#415268; margin: 0; background-color: #fff; }
+
+/* main content area - home page */ 
+#home_center_column { float: left; width: 502px; }
+#home_center_top_area, #home_center_bottom_area, #home_right_column_area { border: 2px solid #415268;  background-color: #ebeff3; margin: 0; }    
+#home_center_top_area { width: 498px; height: 338px; padding: 0; border: none; margin-bottom: 6px; }
+#home_center_bottom_area { width: 498px; height: 745px; }
+#home_right_column { float: right; width: 274px; }
+#home_right_column_area { width: 274px; height: 1089px; float: right;}
+
+
+
+/* ----- FOOTER ----- */
+#wrapper_bottom { width: 1001px; margin: 0 auto; }
+#footer { padding: 0; margin: 0 auto 10px auto; border: 2px solid #1D2532; background-color: #1D2532; height: 90px; color: #B0AFAD; position: relative; font-size: 10pt; line-height: 1.3em; } 
+#footer a { text-decoration: none; color: #B0AFAD; } 
+#footer a:hover { color: white; } 
+#footer #footer_left { position: absolute; top: 10px; left: 2px; }
+#footer #footer_center { position: absolute; top: 10px; left: 220px; text-align: center; }
+#footer #footer_right { position: relative; float: right; padding: 12px 20px 0 0; text-align: left; }
+#footer #jpl_title { font-weight: bold; font-size: 11pt; }
+#footer ul.bottom_links { text-align: center; left: 0; top: 65px; position: absolute; width: 100%; }
+#footer ul.bottom_links li { margin-right: 5px; color: #74A3CE; display: inline; }
+#footer ul.bottom_links a { color: #74A3CE; } 
+#footer ul.bottom_links a:hover { color: white; }
+
+
+                                                       
+

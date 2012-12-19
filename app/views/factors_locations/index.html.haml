@@ -1,0 +1,26 @@
+%h1 Listing Factors_locations
+
+%table
+  %tr
+    %th Factor ID
+    %th Location ID
+    %th Value
+    %th Description
+    %th
+
+  - @factors_locations.each do |factors_location|
+    %tr
+      %td= factors_location.factor_id
+      %td= factors_location.location_id
+      %td= factors_location.value
+      %td= factors_location.description
+      %td
+        = link_to 'Show', factors_location
+        \|
+        = link_to 'Edit', edit_factors_location_path(factors_location)
+        \|
+        = link_to 'Destroy', factors_location, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Factors_location', new_factors_location_path

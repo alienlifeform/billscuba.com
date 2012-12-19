@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#newsletter_container { margin: 0; padding: 0; height: 100%; text-align: center; color: #2c2f3d; font-family: Helvetica, Arial, sans-serif; }
+#newsletter_container img { border: 0; }
+
+.clear { clear:  both; } /* use after floats so that they are contained in wrapper div */
+
+/* horizontal lines */
+div.nl_hr { height: 1px; background: #c1c3cb url(/assets/images/admin/hr.gif) no-repeat scroll center; }
+div.nl_hr hr { display: none; }
+
+.fancybox-skin {
+	background: #3E6083 !important;
+}
+
+#newsletter p, #newsletter a { line-height: 1.4em }
+#newsletter p { color: #333B49; font-size: 11pt; margin: 0; }
+#newsletter a { color: #026fb0; text-decoration: none; }
+#newsletter ul.nl_list { list-style: none; padding: 0; margin: 0;} 
+
+
+/* ----- GLOBAL -------- */
+
+#newsletter { padding: 10px; margin: 20px auto; width: 650px; text-align: left; background-color: #fff; }
+#newsletter_preview { padding: 10px; margin: 20px auto; width: 675px; text-align: left; background-color: #fff; }
+.newsletter_restore { display: block !important; }
+#newsletter #nl_banner { width: 650px; height: 96px; margin-bottom: 20px; background-image: url(/assets/images/public/newsletter/newsletter-banner.jpg); }
+#newsletter h4 { font-size: 11pt; color: #1f4866; margin: 0 0 4px 0; font-weight: bold; line-height: 1.3em; }
+#newsletter p { font-size: 11pt; }
+
+
+/* ----- end GLOBAL -------- */
+
+
+
+
+
+/* ----- LEFT COLUMN ----- */
+
+div#nl_left_column { width: 412px; float: left; }
+div#nl_left_column div.nl_header { margin-bottom: 12px; position: relative; }
+
+/* News items area */
+#nl_newsletter_news_items { margin-bottom: 40px; }
+ul#nl_newsletter_news_items_list, ul#nl_newsletter_image_items_list { list-style: none; }
+ul#nl_newsletter_news_items_list { margin: 0; }
+ul#nl_newsletter_news_items_list > li { margin-bottom: 10px; margin-left: 0; }
+ul#nl_newsletter_news_items_list > li a, ul#nl_newsletter_image_items_list > li a { display: block; font-weight: bold; margin: 0 0 4px 0; font-size: 11pt; }
+ul#nl_newsletter_news_items_list > li a { overflow: hidden; /*white-space: nowrap;  text-overflow: ellipsis;*/ } 
+ul#nl_newsletter_news_items_list p.item_desc { overflow: hidden; }
+
+ul#nl_newsletter_news_items_list li .nl_bullet {  width: 4px; height: 40px;  float: left; margin: 5px 10px 0 0; }
+ul#nl_newsletter_news_items_list li .nl_bullet div {  width: 4px; height: 4px; overflow: hidden; background-color: #9BAEC4; }
+/* ul#nl_newsletter_news_items_list li nl_news_content { float: left; } */
+ul#nl_newsletter_news_items_list li div.nl_news_content { margin-left: 0; }
+
+
+/* Image items area */
+ul#nl_newsletter_image_items_list { margin: 0; width: 430px;  }
+ul#nl_newsletter_image_items_list > li { float: left; margin-right: 6px; margin-bottom: 10px; position: relative; width: 133px; height: 160px; }
+/*ul#nl_newsletter_image_items_list li:nth-child(3n+3) { margin-right: 0; } Setting extra width for container instead of this*/
+ul#nl_newsletter_image_items_list li a { font-weight: normal; font-size: 10pt; }
+ul#nl_newsletter_image_items_list li a.img_container  { width: 133px; height: 105px; overflow: hidden; }
+ul#nl_newsletter_image_items_list li img { margin-bottom: 4px; }
+
+/* ----- end LEFT COLUMN ----- */
+
+/* ----- RIGHT COLUMN ----- */
+
+div#nl_right_column { width: 228px; float: right; height: auto; }
+
+/* Text items area */
+li.nl_newsletter_text_item { padding: 10px; position: relative; }
+li.nl_newsletter_text_item, div#nl_newsletter_ad_items { background-color: #eef3f9; margin: 0 0 1px 0; } 
+.nl_header_newsletter_text_items { background-color: #eef3f9; margin: 0 0 1px 0; padding: 6px 6px 2px 0;}
+
+/* Ad items area */
+div#nl_newsletter_ad_items { padding: 17px 17px 1px 17px; }
+div#nl_newsletter_ad_items ul#nl_newsletter_ad_items_list { margin: 0; }
+div#nl_newsletter_ad_items ul#nl_newsletter_ad_items_list li { position: relative; margin-bottom: 17px; width: 193px; }
+ul#nl_newsletter_ad_items_list li a.img_container  { width: 193px; height: auto; overflow: hidden; display: block; }
+li.nl_newsletter_ad_item img { width: 193px; }
+
+/* ----- end RIGHT COLUMN ----- */

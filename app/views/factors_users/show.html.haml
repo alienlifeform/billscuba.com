@@ -1,0 +1,22 @@
+%p#notice= notice
+
+#show_cols
+  #col_1_of_3
+  %p
+    %b Factor:
+    = @factors_user.factor_id
+  %p
+    %b User:
+    = @factors_user.user_id
+  %p
+    %b Value:
+    = @factors_user.value
+  %p
+    %b Description:
+    = @factors_user.description
+
+#footer
+  %hr
+  = link_to 'Edit', edit_factors_user_path(@factors_user)
+  \|
+  = link_to 'Back', factors_users_path

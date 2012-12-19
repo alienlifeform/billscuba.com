@@ -1,0 +1,22 @@
+%p#notice= notice
+
+#show_cols
+  #col_1_of_3
+    %p
+      %b Factor ID:
+      = @factors_location.factor_id
+    %p
+      %b Location ID:
+      = @factors_location.location_id
+    %p
+      %b Value:
+      = @factors_location.value
+    %p
+      %b Description:
+      = @factors_location.description
+
+#footer
+  %hr
+  = link_to 'Edit', edit_factors_location_path(@factors_location)
+  \|
+  = link_to 'Back', factors_locations_path

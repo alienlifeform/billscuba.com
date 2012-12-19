@@ -1,0 +1,53 @@
+/* ----- GLOBAL ----- */
+
+a { color: #4C6C91; }
+h1 { color: #A23C0F; font-size: 20pt; font-weight: bold; }
+h1 span { color: dimGray; font-size: 11pt; }
+p { font-size: 11pt; color: #333B49; line-height: 1.4em; margin-bottom: 12px; }
+.left { float: left; }
+.right { float: right; }
+/* ----- end GLOBAL ----- */
+
+
+
+
+
+/* ----- MAIN AREA (all white area beneath the page header) ----- */
+
+#main_area { padding: 24px 18px; margin-bottom: 18px; }
+
+/* ----- end MAIN AREA (all white area beneath the page header) ----- */
+
+
+
+
+
+/* ----- ITEM LISTS ( News, home page, missions, etc.)----- */
+
+.list_header { margin: 0 0 16px 0; }
+
+ul.item_list { margin-bottom: 40px; } 
+ul.item_list li { width: 100%; }
+ul.item_list li.last_item { margin-bottom: 0 !important; } 
+ul.item_list li .list_content { margin: 18px 0; float: left; width: 100%; } 
+ul.item_list li .hr { width: 100%; float: left; margin: 0; }    
+ul.item_list img { width: 470px; height: auto; overflow: hidden; float: left; }
+ul.item_list div.list_text { float: left; width: 470px; margin-left: 14px; }
+ul.item_list p.list_date { font-size: 9pt; margin-bottom: 4px; }
+ul.item_list h3 { font-size: 18pt; margin-bottom: 10px; } 
+ul.item_list h3.list_title { margin-bottom: 4px; line-height: 1.2em; }
+ul.item_list h4 { display: block; color: #A23C0F; font-size: 12pt; font-weight: bold; margin-bottom: 6px; }
+ul.item_list h5 { display: block; color: dimGray; font-size: 11pt; font-weight: bold; margin-bottom: 6px; }
+ul.item_list p.list_description { margin-bottom: 8px; }
+ul.item_list a {   }
+ul.item_list a.main_link { display: block; font-weight: bold; text-decoration: none; font-size: 11pt; margin-bottom: 6px; } 
+ul.item_list a:hover { text-decoration: underline; } 
+ul.item_list a.list_link { font-size: 10pt; text-decoration; none; margin-right: 10px; } 
+
+ul.item_list .list_subsection { float: left; margin: 18px 0 0 0; width: 100%; }
+ul.item_list .list_subsection .left, ul.item_list .list_subsection .right { width: 50%; }
+
+ul.item_list .list_bottom_links a { margin: -4px 16px 0 0; }
+ul.item_list .list_bottom_links a:hover {  }
+     
+/* ----- end ITEM LISTS ----- */

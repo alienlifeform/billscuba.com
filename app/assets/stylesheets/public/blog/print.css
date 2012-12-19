@@ -1,0 +1,7 @@
+#left_column, #right_column, #wrapper_header_2, #wrapper_top, #main_area_right,
+.comments, #footer, #content_share_tools, #main_area_header {
+	display : none !important;
+}
+* {	font-family: Helvetica, Arial, sans-serif; }
+
+#main_area_left { width: 100% !important; }

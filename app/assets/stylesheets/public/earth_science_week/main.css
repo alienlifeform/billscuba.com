@@ -1,0 +1,59 @@
+
+/* ----- MAIN AREAS ----- */
+#page_content { margin-bottom: 30px; }
+
+#main_area > .left_column { padding: 0 0 0 18px; width: 460px; float: left; }
+#main_area > .right_column { float: right; display: block; width: 270px; background: #f3f7dc; margin-right: 18px; }
+
+#main_area #main_area_bottom_links a { float: left; margin-right: 16px; font-size: 10pt; text-decoration: none; font-weight: bold; }
+#main_area #main_area_bottom_links a:hover { text-decoration: underline; }
+#main_area #main_area_bottom_links.right a { margin-right: 0; }
+
+.list_header { color: #00476f; font-size: 14pt; }
+
+/* ----- end MAIN AREAS ----- */
+
+
+
+
+
+
+
+/* ----- ITEM LISTS ( News, home page, missions, etc.)----- */
+
+ul#list_page_subnav { margin-bottom: 14px; }
+ul#list_page_subnav li { margin-bottom: 8px; font-weight: bold; font-size: 13pt; }
+ul#list_page_subnav li a { color: #99b2d0; text-decoration: none; } 
+ul#list_page_subnav li a.current, ul#list_page_subnav li a:hover { color: #4C6C91; }
+ 
+ul.item_list li { margin-bottom: 16px; width: 100%; }
+ul.item_list li.last_item { margin-bottom: 0 !important; } 
+ul.item_list li .list_content { margin: 18px 0; float: left; width: 100%; } 
+ul.item_list li .hr { width: 100%; float: left; margin: 0; }    
+ul.item_list img { width: 133px; height: 105px; overflow: hidden; float: left; }
+ul.item_list div.list_text { float: left; width: 596px; margin-left: 14px; }
+ul.item_list p.list_date { font-size: 9pt; margin-bottom: 4px; }
+ul.item_list h3 { font-size: 14pt; margin-bottom: 10px; } 
+ul.item_list h3.list_title { margin-bottom: 4px; line-height: 1.2em; }
+ul.item_list h4 { font-size: 11pt; font-weight: bold; margin-bottom: 4px; }
+ul.item_list p.list_description { margin-bottom: 4px; font-size: 11pt; }
+ul.item_list p.list_notes { font-size: 8pt; margin-top: 6px; color: #888; }
+ul.item_list a { text-decoration: none; } 
+ul.item_list a:hover { text-decoration: underline; } 
+ul.item_list a.list_link { font-size: 10pt; text-decoration; none; margin-right: 10px; } 
+
+ul.item_list li ul.list_sublist { margin-top: 14px;  font-size: 11pt; }
+ul.item_list li ul.list_sublist.indented { margin-left: 10px; } 
+ul.item_list li ul.list_sublist li a { display: block; font-weight: bold; margin-bottom: 2px; }
+ul.item_list li h4.list_title { display: block; font-size: 11pt; margin-top: 18px; }
+     
+/* for left column */
+#main_area > .left_column ul.item_list div.list_text { width: 310px; }
+#main_area > .left_column ul.item_list { width: auto; } 
+
+/* ----- end ITEM LISTS ----- */
+
+
+
+
+  

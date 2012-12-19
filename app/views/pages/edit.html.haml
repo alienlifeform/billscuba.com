@@ -1,7 +1,12 @@
-%h1 Editing page
+%h1 
+  Editing page:
+  %i= @page.title
+
 
 = render 'form'
 
-= link_to 'Show', @page
-\|
-= link_to 'Back', pages_path
+#footer
+  %hr
+  = link_to 'Show', @page
+  \|
+  = link_to 'Back', pages_path

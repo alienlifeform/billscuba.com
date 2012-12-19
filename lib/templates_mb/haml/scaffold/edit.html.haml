@@ -1,0 +1,28 @@
+= render :partial => @current_admin_view_folder + '/header'
+
+#admin_page_content
+  .admin_control_box
+    .admin_control_box_left_column
+      .admin_control_box_header_area
+        %h3 Edit <%= singular_name.humanize %>
+        %a#edit_item_help_btn.help_btn{:href => "javascript:void(0);", :onclick => "admin.toggleHelpMsg('#edit_item_help_msg')", :title => "help"} help
+    
+    .admin_control_box_right_column
+      %a#item_add_btn.admin_control_btn.admin_control_btn_right{:href => "javascript:void(0);", :onclick => "$('#edit_form').submit()"}
+        %div{:title => "Done"} DONE
+      %a#item_add_btn.admin_control_btn.admin_control_btn_right.fancybox{:href => "javascript:void(0);", :onclick => "admin.submitFormForPreview('edit_form', '#{polymorphic_path([:admin,@item])}')"}
+        %div{:title => "Preview"} PREVIEW
+      %a#item_add_btn.admin_control_btn.admin_control_btn_right{:href => '/admin/' + @current_item_type}
+        %div{:title => "Cancel"} CANCEL
+
+    .admin_control_box_full_width_area
+      #edit_item_help_msg.admin_help_msg
+        %p 
+          • This is the page where you edit a <%= singular_name.humanize %>
+      
+      = render :partial => '/admin/assets/errors_and_notices'
+      = render :partial => '/admin/assets/save_animation'
+      .hr
+        %hr/
+
+      = render :partial => @current_admin_view_folder + '/form'

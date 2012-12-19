@@ -1,0 +1,3 @@
+class Admin::<%= controller_class_name %>Controller < AdminController
+  # AdminController should be able to handle everything we do here...
+end

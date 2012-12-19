@@ -1,0 +1,11 @@
+%tr{ :id => 'item_' + list_item.id.to_s}
+  <% for attribute in attributes -%>
+    
+  %td.<%= attribute.name %>
+    = list_item.<%= attribute.name %>
+  <% end -%>
+  
+  %td.admin_table_edit_column
+    .admin_td_btns
+      %a.admin_icon_btn.admin_icon_list_edit_btn{:href => "/admin/#{@current_view_folder}/#{list_item.id}/edit"}
+      %a.admin_icon_btn.admin_icon_list_remove_btn{:href => "javascript:void(0);", :onclick => "adminDialog.open(adminDialogType.info, '/#{@current_admin_view_folder}/#{list_item.id}/delete_confirm')"}

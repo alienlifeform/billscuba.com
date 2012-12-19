@@ -1,0 +1,58 @@
+/ title to go in the page_header
+- content_for :title do
+  %a{:href => "/news/index"} NEWS
+
+#main_area
+  #page_header_2
+    %h2
+      Title for this content
+  #left_column  
+    %a{:href => "javascript:void(0);"}
+      %img#main_image{:src => "/assets/public/content/newsPage-767.jpeg"} 
+    #content_share_tools
+      %img{:src => "/assets/public/content/share-btns-temp.png"}
+    %p#date 08.28.12
+    %p#credit
+      By Karen C. Fox
+      %br>/
+      NASA Goddard Space Flight Center
+    #body_content
+      %p 
+        This is the body content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis leo vitae ipsum congue eleifend. Morbi sit amet dui magna. Quisque scelerisque orci eget magna ultricies tempus.
+      %blockquote.pullquote
+        .hr
+          %hr/
+        .hr
+          %hr/
+        %p#pullquote_quote This is the quote leo vitae ipsum congue eleifend. Quisque sagittis leo vitae ipsum congue eleifend.
+        %p#pullquote_attribution -This is the attribution
+        .hr
+          %hr/
+        .hr
+          %hr/ 
+      %p This is the body content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis leo vitae ipsum congue eleifend. Morbi sit amet dui magna. Quisque scelerisque orci eget magna ultricies tempus. This is the body content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis leo vitae ipsum congue eleifend. Morbi sit amet dui magna. Quisque scelerisque orci eget magna ultricies tempus. This is the body content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis leo vitae ipsum congue eleifend. Morbi sit amet dui magna. Quisque scelerisque orci eget magna ultricies tempus.
+      %p
+        The available fieldnames for use in haml are:
+        <% for attribute in attributes -%>
+          
+          %br/
+          @item.<%= attribute.name %>
+        <% end %>
+      %a{:href => "javascript:void(0)"}
+        %img.inline_image{:src => "/assets/public/content/temp-img.jpeg"} 
+      %p This is the body content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis leo vitae ipsum congue eleifend. Morbi sit amet dui magna. Quisque scelerisque orci eget magna ultricies tempus.
+      .hr
+        %hr/
+      %img.inline_image{:src => "/assets/public/content/fb-plugin-temp.jpg"}
+      .hr
+        %hr/
+      #main_area_bottom_links
+        %a{:href => "javascript:void(0);"}  › News Archive
+        %a{:href => "javascript:void(0);"}  › Another link  
+  #right_column
+    #image_caption 
+      %p  
+        This is the image caption and should be in the right column, although this may change Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis leo vitae ipsum congue eleifend. Morbi sit amet dui magna. Quisque scelerisque orci eget magna ultricies tempus. 
+      %p 
+        %a.caption_link{:href => "javascript:void(0);"} + enlarge image
+  .clear 

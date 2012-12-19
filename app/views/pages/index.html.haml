@@ -12,8 +12,6 @@
     %th Side area 3
     %th Template
     %th
-    %th
-    %th
 
   - @pages.each do |page|
     %tr
@@ -26,9 +24,12 @@
       %td= page.side_area_2
       %td= page.side_area_3
       %td= page.template
-      %td= link_to 'Show', page
-      %td= link_to 'Edit', edit_page_path(page)
-      %td= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }
+      %td
+        = link_to 'Show', page
+        \|
+        = link_to 'Edit', edit_page_path(page)
+        \|
+        = link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

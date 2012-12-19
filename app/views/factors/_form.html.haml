@@ -1,0 +1,26 @@
+= form_for @factor do |f|
+  .actions
+    = f.submit 'Save'
+  %hr
+
+  - if @factor.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@factor.errors.count, "error")} prohibited this factor from being saved:"
+      %ul
+        - @factor.errors.full_messages.each do |msg|
+          %li= msg
+  
+  #edit_cols
+    #col_1_of_3
+      .field
+        = f.label :title
+        = f.text_field :title
+      .field
+        = f.label :style
+        / = f.text_field :style
+        = f.select :style, options_for_select(styles_for_select()),{}
+      .field
+        = f.check_box :show_in_survey, :id => 'form_show_in_survey', :placeholder => 'Show in survey'
+        = f.label :show_in_survey
+
+    

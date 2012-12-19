@@ -3,34 +3,23 @@
 %table
   %tr
     %th Title
-    %th Short desc
-    %th Long desc
     %th City
     %th Region
     %th Country
-    %th Geography
-    %th Population
-    %th Image 1
-    %th Image 2
-    %th
-    %th
     %th
 
   - @locations.each do |location|
     %tr
-      %td= location.title
-      %td= location.short_desc
-      %td= location.long_desc
+      %td= link_to location.title, location
       %td= location.city
       %td= location.region
       %td= location.country
-      %td= location.geography
-      %td= location.population
-      %td= location.image_1
-      %td= location.image_2
-      %td= link_to 'Show', location
-      %td= link_to 'Edit', edit_location_path(location)
-      %td= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' }
+      %td
+        = link_to 'Show', location
+        \|
+        = link_to 'Edit', edit_location_path(location)
+        \|
+        = link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 

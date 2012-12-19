@@ -1,0 +1,21 @@
+= form_for [:admin,@item], :html => { :id => 'edit_form' } do |f|
+  = f.hidden_field :current_view_folder, :value => @current_view_folder
+  %table.admin_text_input_form_table
+    <% for attribute in attributes -%>
+      
+    %tr
+      %td
+        = f.label :<%= attribute.name %>, '<%= attribute.name.underscore.humanize %>'
+      %td
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, :id => 'form_<%= attribute.name %>', :placeholder => '<%= attribute.name.underscore.humanize %>'
+    <% end -%>
+
+  .hr
+    %hr/
+  .admin_form_bottom_btns.done_preview_cancel_btns
+    %a#item_add_btn.admin_control_btn{:href => "javascript:void(0);", :onclick => "$('#edit_form').submit()"}
+      %div{:title => "Done"} DONE
+    %a#item_add_btn.admin_control_btn.fancybox{:href => "javascript:void(0);", :onclick => "admin.submitFormForPreview('edit_form', '#{polymorphic_path([:admin,@item])}')"}
+      %div{:title => "Preview"} PREVIEW
+    %a#item_add_btn.admin_control_btn{:href => '/admin/' + @current_item_type}
+      %div{:title => "Cancel"} CANCEL

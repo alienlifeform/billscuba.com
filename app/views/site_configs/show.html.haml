@@ -1,18 +1,25 @@
+%h1 
+  Editing Site Config
+
 %p#notice= notice
 
-%p
-  %b Title:
-  = @site_config.title
-%p
-  %b Desc:
-  = @site_config.desc
-%p
-  %b Logo:
-  = @site_config.logo
-%p
-  %b Contact us blurb:
-  = @site_config.contact_us_blurb
+#show_cols
+  #col_1_of_3
+    %p
+      %b Title:
+      = @site_config.title
+    %p
+      %b Desc:
+      = @site_config.desc
+    %p
+      %b Logo:
+      = @site_config.logo
+    %p
+      %b Contact us blurb:
+      = @site_config.contact_us_blurb
 
-= link_to 'Edit', edit_site_config_path(@site_config)
-\|
-= link_to 'Back', site_configs_path
+#footer
+  %hr
+  = link_to 'Edit', edit_site_config_path(@site_config)
+  \|
+  = link_to 'Back', site_configs_path

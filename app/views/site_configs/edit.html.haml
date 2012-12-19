@@ -1,7 +1,10 @@
-%h1 Editing site_config
+%h1 Editing Site Config
 
 = render 'form'
 
-= link_to 'Show', @site_config
-\|
-= link_to 'Back', site_configs_path
+
+#footer
+  %hr
+  = link_to 'Show', @site_config
+  \|
+  = link_to 'Back', site_configs_path

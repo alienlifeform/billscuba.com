@@ -1,0 +1,11 @@
+%h1 
+  Editing user:
+  %i= @user.email
+
+= render 'form'
+
+#footer
+  %hr
+  = link_to 'Show', @user
+  \|
+  = link_to 'Back', users_path

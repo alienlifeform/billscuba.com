@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title BillscubaCom
+    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "admin/includes", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #admin_content
+      #admin_main_area  
+        = yield
+
+      #footer_right
+        = link_to :locations, locations_path
+        \|
+        = link_to :factors_locations, factors_locations_path
+        \|
+        = link_to :factors, factors_path
+        \|
+        = link_to :factors_users, factors_users_path
+        \|
+        = link_to :users, users_path
+        \|
+        = link_to :pages, pages_path
+        \|
+        = link_to :site_config, site_configs_path

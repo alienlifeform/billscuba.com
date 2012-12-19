@@ -1,7 +1,11 @@
 BillscubaCom::Application.routes.draw do
-  resources :locations_questions
+  resources :factors_users
 
-  resources :questions
+  resources :users
+
+  resources :factors_locations
+
+  resources :factors
 
   resources :locations
 

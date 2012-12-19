@@ -1,0 +1,189 @@
+@charset "UTF-8"; 
+
+/*===== reset =====*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;} body {	/* line-height: 1; */} ol, ul {	list-style: none;} blockquote, q {	quotes: none;} blockquote:before, blockquote:after,q:before, q:after {	content: ''; content: none;} :focus {	outline: 0;} ins {	text-decoration: none;} del {	text-decoration: line-through;} table {	border-collapse: collapse; border-spacing: 0;} dd:after, div:after, .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;} div, .clearfix { display: inline-block; } * html div, * html .clearfix { height: 1%; } div, .clearfix, .clear { display: block; } .clear, body .content .clear, body div .content .clear {clear:both;}
+ 
+
+/* ===== global styles ===== */
+body {font-family: Helvetica, Arial, Verdana; background-color: #000; margin: 0; padding: 0; overflow-y: scroll; }
+div#outer_div {margin:15px auto; width: 960px; position: relative; }
+#main {background-color: #212121; padding: 15px 15px 15px 15px; }
+h1, h2 {color: #fff;}
+h1 {font-size: 16pt; font-weight: 500; margin: 12px 0 0 0; padding: 0; }
+h2 {font-size: 11pt; font-weight: 500; margin: 8px 0 0 0; padding: 0; }
+h3 {color: #c8c5c5; font-size: 9pt; margin: 0; font-weight: 500; }
+p {color: #d1d1ce; font-size: 10pt; margin: 10px 0 0 0; line-height: 1.3em; }
+div.hr {height: 1px; background: #575858 url(/assets/images/public/state_of_flux/hr.gif) no-repeat scroll center; }
+div.hr hr {display: none; }
+img {border-style: none; }
+#gallery_preload_area { position: absolute; top: -5000px; left: -5000px; }
+.clear { clear: both }
+#mapForm {display: none;}
+
+
+
+/* ==== flux-sprite registry ==== */
+.flux_control_rail, .nav_arrow_right, .nav_arrow_left, .view_btn_image, .view_btn_map, .view_btn_all, .sorters_and_regions {background: url(/assets/images/public/state_of_flux/flux-sprite.jpg) 0 0 no-repeat;  overflow: hidden;}
+ 
+ 
+
+/* ===== header ===== */
+#header {margin-bottom: 10px;	}
+#header #header_left {float: left; }
+#header img#flux_logo {padding-left: 3px; }
+.flux_control_rail, .sorters_and_regions {background-position: 0 -64px; padding: 6px 5px 0; width: 921px; height: 26px; text-align: center; position: relative; overflow: visible; *zoom: 1; *z-index: 30000;}
+.flux_control_rail {margin-bottom: 6px;}
+.sorters_and_regions {padding: 0 5px 0; height: 31px}
+#header #header_right {float: right; text-align: right; }
+#header #header_right a {font-size: 8pt; color: #a09d9d; display: block; clear: both;	}
+#header #header_right a:hover {color: #fff;	}
+#header_right #gcc_logo {margin: 9px 0 7px 0; background: url(/assets/images/public/state_of_flux/logo_gcc.gif) top left no-repeat; width: 219px; height: 12px; overflow: hidden; float: right; display: block; }
+#header_right #gcc_logo:hover {background-position: bottom left; }
+#about_text {margin: 15px 0 12px 0; display: none; }
+
+/* ====== image nav + counter ====== */
+.nav_arrow_controls, .tiled_thumbnail_controls {width: 200px; position: absolute; left: 416px; top: 6px; }
+.map_mode .nav_arrow_controls, .thumbnail_mode .nav_arrow_controls, .tiled_thumbnail_controls {display: none;}
+.thumbnail_mode .tiled_thumbnail_controls {display: block; left: 424px;}
+.share {position: absolute; top: 6px; right: 7px;}
+.share a {margin: 0 3px 0 0; padding: 0;}
+.share img {margin: 0; padding: 0; width: 19px; height: 19px}
+.share a#email_link { display: none; }
+.nav_arrow_left {background-position: -285px -1px; width: 19px; height: 19px; overflow: hidden; float: left; cursor: pointer; }
+.nav_arrow_left:hover {background-position: -285px -22px; }
+.nav_count, .thumbnail_screen_count {color: #888; text-decoration: none; font-size: 9pt; padding: 3px 7px 0 7px; float: left; }
+.nav_arrow_right {background-position: -306px -1px; width: 19px; height: 19px; overflow: hidden; float: left; cursor: pointer; }
+.nav_arrow_right:hover {background-position: -306px -22px; }
+/*.flux_control_rail .show_all {width: 95px; height: 20px; float: left; background-position: -189px -1px; margin-left: 8px; cursor: pointer; }
+.flux_control_rail  .show_all:hover {background-position: -189px -22px; }*/
+.nav_arrow_controls .inactive, .tiled_thumbnail_controls .inactive {opacity: .5; pointer-events: none; cursor: default; }
+
+/*====== map vs image mode select buttons ======*/
+.viewSelector {width: 340px; position: absolute; left: 0; top: 6px;}
+body .view_btn_image {background-position: 0 -43px; cursor: default; }
+.view_btn_image {background-position: 0 -43px; width: 93px; height: 19px; float: left; margin-left: 7px; }
+.map_mode .view_btn_image, .thumbnail_mode .view_btn_image {background-position: 0 -1px; cursor: pointer; }
+.map_mode .view_btn_image:hover, .thumbnail_mode .view_btn_image:hover {background-position: 0 -22px; }
+.view_btn_map {background-position: -95px -1px; width: 93px; height: 19px; float: left; margin-left: 7px; overflow: hidden; cursor: pointer; }
+.view_btn_map:hover {background-position: -95px -22px; }
+.map_mode .view_btn_map, .map_mode .view_btn_map:hover {background-position: -95px -43px; cursor: default; }
+.view_btn_all {background-position: -190px -1px; width: 93px; height: 19px; float: left; margin-left: 7px; overflow: hidden; cursor: pointer; }
+.view_btn_all:hover {background-position: -190px -22px; }
+.thumbnail_mode .view_btn_all, .thumbnail_mode .view_btn_all:hover {background-position: -190px -43px; cursor: default; }
+
+/*======= region box (styled <select />)=======*/
+.regionBox { background: url(/assets/images/public/state_of_flux/regionBox.png) 0 0 no-repeat; display: none; height: 19px; width: 167px; position: absolute; left: 380px; top: 6px; overflow: hidden; z-index: 30000; font-size: 9pt; cursor: pointer; _background-image: url(/assets/images/public/state_of_flux/regionBox-8bit.png); }
+.map_mode .regionBox { display: block; }
+.regionBoxOpen {overflow: visible; height: auto; background-position: 0 -22px; -webkit-border-radius: 0 0 3px 3px; border-radius: 0 0 3px 3px;}
+.regionBox div {background: #3f4449; text-align: left; white-space: nowrap; padding: 2px 0 2px 20px; height: 17px; *zoom: 1; color: #cbd9e4; }
+.firefox .regionBox div:first-child {padding: 4px 0 0 20px;}
+.regionBox div:hover {background: #3693dd;}
+.regionBox div:first-child, .regionBox div:first-child:hover, .regionBox .hitBox:hover {background: none;}
+.regionBox .hitBox {height: 20px; width: 167px; position: absolute; top: 0; left: 0; background: transparent; }
+.regionBoxOpen div:last-child { -webkit-border-radius: 0 0 3px 3px; border-radius: 0 0 3px 3px;}
+
+
+
+
+/* ===== main image area ===== */
+#image_area.spin {min-height: 300px; _height: 300px;}
+#image_area.spin {background: url(/assets/images/public/state_of_flux/spin.gif) 50% 50% no-repeat;}
+#image_area #featured_image, #image_area #large_map {width: 930px; position: relative; }
+#featured_image {overflow: hidden; height: 300px;}
+#image_area p {padding: 150px 0 150px 425px; }
+#image_area #large_map {display: none; }
+#infoWindowClass {position:absolute; padding:10px; height: 155px; background-color: #E7F8CD; color: #3F3F3F; border:0.5px solid #8D8D8D; font-size:80%; z-index: 990; display: none; }
+div.infoWindow {color: #666; font-size: 8pt; }
+
+
+
+
+/* ===== description area ===== */
+#description_area {display: none;}
+#description_area .date {float: left; margin: -2px 0 10px 0; color: #b4b3b3; font-size: 9pt; width: 467px; }
+#description_area #date2 { width: 460px;}
+#description_area #date3, #description_area #date4 {display: none;}
+#description_area.triptych #date3, #description_area.quadruple #date4 {display: block;}
+#description_area.triptych .date, #description_area.triptych #date2 { width: 311px; }
+#description_area.quadruple .date, #description_area.quadruple #date2 { width: 233px; }
+#description_area.triptych #date3 { width: 300px; }
+#description_area.quadruple #date4 { width : 220px; } 
+#description_area #description_left {width: 650px; float: left; margin-bottom: 7px; }
+#description_left #credits{ color: #d1d1ce; font-size: 8pt; margin: 10px 0 0 0; display: none; line-height: 1.4em; }
+#description_left #credits > p {font-size: 8pt;}
+#description_left a {color: #d1d1ce;}
+#description_footer {margin: 20px 0 0 0; }
+/*#description_footer #download_icon {margin-right: 4px; float: left; background: url(/assets/images/public/state_of_flux/button_download.gif) top left no-repeat; width: 16px; height: 16px; overflow: hidden; }*/
+/*#download_link a, */#description_footer #credits_link {font-size: 8pt; color: #c8c5c5; float: left; }
+#credits_link {text-decoration: underline; cursor: pointer;}
+/*#download_link a {text-decoration: none; }*/
+/*#download_link a:hover #download_icon {background-position: bottom left; }*/
+/*#download_link a:hover, */#description_footer #credits_link:hover {color: #fff; }
+#description_right {float: right; margin: 10px 0 10px 0; border: solid #575858 thin; padding: 4px; cursor: pointer; position: relative;}
+#description_right tt {position: absolute; top: 0; left: 0; bottom: 0; right: 0; _width: 240px; _height: 148px; background: #000; cursor: pointer;}
+#map_canvas {width: 240px; height: 148px; overflow: hidden; }
+
+
+
+/* ===== sort / thumbnail menu area ===== */
+.sort_menu {margin-top: 6px; float: left;	color: #A0D2FA; text-align: center; width: 100%; -webkit-transform: translate(0,-1px);}
+.sort_menu .sort_title {float: left; margin-right: 12px; }
+.sort_menu a {font-size: 9pt; font-weight: 500; letter-spacing: .1em; color: #a0d2fa; text-decoration: none; padding: 0 3px;	}
+.sort_menu a:hover {color: #d6ecfe;	}
+.sort_menu .selected, .sort_menu .selected:hover {color: #fff; cursor: default;}
+#thumbnail_menu {margin-top: 25px; height: 167px;	position: relative; overflow: hidden;}
+#thumbnail_menu.loading {background: url(/assets/images/public/state_of_flux/spin.gif) 50% 50% no-repeat;}
+#thumbnail_menu .inactive {opacity: .5; cursor: default; }
+#thumbnail_menu #left_thumb_arrow {float: left; margin: 50px 2px 0 -5px; background: url(/assets/images/public/state_of_flux/button_arrow_left.gif) top left no-repeat; width: 27px; height: 40px; overflow: hidden;	cursor: pointer; }
+#thumbnail_menu #right_thumb_arrow {float: right; margin: 50px -5px 0 0; background: url(/assets/images/public/state_of_flux/button_arrow_right.gif) top left no-repeat; width: 27px; height: 40px; overflow: hidden;	cursor: pointer; }
+#thumbnail_menu a:hover #left_thumb_arrow, #thumbnail_menu a:hover #right_thumb_arrow  {background-position: bottom left; }
+#thumbnail_strip div {background-color: #373838; width: 133px; height: 105px; padding: 5px 5px 45px 5px; margin: 0 2px 12px 2px; float: left; cursor: pointer; }
+#thumbnail_strip {float: left; clear: none; width: 883px;}
+#thumbnail_menu.open {margin-top: 0;}
+#thumbnail_menu.open #thumbnail_strip {width: 937px;}
+#thumbnail_strip div:hover, #thumbnail_strip div.selected  {background-color: #484949; }
+#thumbnail_strip div.selected { cursor: default;	}
+#thumbnail_strip div:hover *, #thumbnail_strip div.selected * {color: #d7d4d4; font-size: 8pt; }
+#thumbnail_strip p, #thumbnail_strip h5 { color: #afafaf; font-size: 8pt; font-weight: normal; margin-top: 4px; height: 12px; overflow: hidden; }
+#thumbnail_strip div {text-decoration: none;}
+#thumbnail_menu.open #thumbnail_strip div {margin: 0 6px 12px;}
+
+
+
+/* ===== footer ===== */
+#footer {margin-top: 12px; } 
+#jpl_link { font-weight: bold }
+ul#footer_left {float: left; width:auto; }
+ul#footer_left li {float: left; margin-right: 7px; }
+ul#footer_left, ul#footer_left a {float: left; font-size: 9pt; color: #615f5f; text-decoration: none; }
+ul#footer_left a:hover {color: #c9c8c8; }
+/* #footer .footer_divider {float: left; padding: 0 7px 0 7px;	} */
+#footer_right {float: right;}
+
+
+
+/* ==== custom google maps DataWindows==== */
+#map_canvas div div div.dataWindow {background: #fff; width: 133px; padding: 7px; position: absolute !important; display: none; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 5px 5px 10px #666; box-shadow: 5px 5px 10px #666; color: #000; font-size: .7em; z-index: 10000 !important; min-height: 135px; }
+#map_canvas div div div.dataWindow img {margin-bottom: 5px; }
+#pulseMarker {position: absolute !important; top: 50px; left: 50px; z-index: 10000 !important;}
+
+
+
+/* ==== administration interface ==== */
+#locationResultsPane {color: #ccc; padding-bottom: 20px;}
+#administrationPane {color: #fff; margin-top: 20px;}
+#locationForm {margin: 15px 0 20px;}
+#locationSubmitButton {margin-left: 10px;}
+#locationResultsPane h1 {margin-bottom: 2px;}
+#locationResultsPane h2 {line-height: 1.6em; color: #ccc;}
+#locationResultsPane .result {line-height: 1.6em; color: #fff;}
+
+
+/* ==== next-last overlay buttons ==== */
+#featured_image cite, #featured_image code {position: absolute; top: 0; left: 0; width: 50%; height: 100%; _height: 200px; background: url(/assets/images/public/state_of_flux/next-previous.png) -2000px -2000px no-repeat; cursor: pointer; }
+body #featured_image code.inactive, body #featured_image site.inactive {cursor: default; background: red; }
+#featured_image cite:hover {background-position: -68px 50%; }
+#featured_image code {left: 50%; }
+#featured_image code:hover {background-position: 410px 50%; }
+body #featured_image cite.inactive, body #featured_image code.inactive {cursor: default; background: none;}
+

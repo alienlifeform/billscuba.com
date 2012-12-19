@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* CSS Document - admin - main.css */
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;} .clearfix { display: inline-block; } * html .clearfix { height: 1%; } .clearfix { display: block; } 
+
+
+
+
+/* ----- CSS RESET ----- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+b, strong { font-weight: bolder } /* custom */
+	
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: seperate;
+	border-spacing: 0;
+}
+p {	line-height: 1.4em; margin: 0 0 1em 0;}
+.right { float: right; }
+.hidden { visibility: hidden; }
+
+/* ----- end CSS RESET -------- */
+
+
+
+
+/* ----- FOR TESTING ----- */
+
+.admin_control_box.disable a { color: #CACACA !important; pointer-events: none !important; cursor: default !important; }
+
+.spinner { top: 60px !important; left: 185px !important; }
+
+/* ----- end FOR TESTING ----- */
+
+
+
+/* ----- GLOBAL -------- */
+
+/* The admin "body" */
+#admin_content { color: #2c2f3d; font-family: Helvetica, Arial, sans-serif; text-align: left; }
+
+/* Everything except the header bar */
+#admin_main_area { margin: 0 18px 30px 18px; padding: 0; }
+
+/* a */
+#admin_main_area a.small_hyperlink { font-size: 9pt; font-weigth: normal; text-decoration: underline; }
+#admin_main_area a { color: #026fb0; }
+#admin_content {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 0px;
+}
+textarea {
+	height: 176px;
+	width: 250px;
+	margin-bottom: 10px;
+}
+input[type="text"] {
+	width: 250px;
+	margin-bottom: 10px;
+}
+select {
+	width: 250px;
+	margin-bottom: 10px;
+}
+
+#edit_cols {
+	position: relative;
+	top:40px;
+	left:100px;
+}
+#show_cols {
+	position: relative;
+	top:30px;
+	left:100px;
+}
+#col_1_of_3 {
+	position: absolute;
+	left: 0px;
+	width: 250px;
+}
+#col_2_of_3 {
+	position: absolute;
+	left: 300px;
+	width: 250px;
+}
+#col_3_of_3 {
+	position: absolute;
+	left: 600px;
+	width: 250px;
+}
+
+
+#footer {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+}
+#footer_right {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+
+/* Tables */
+table { width: 100%; table-layout: fixed; border-spacing: 1px;;}
+/* Dialog table width */
+table td, th { font-size: 10pt; padding: 8px;}
+table th { text-align: left; background-color: #848383; color: #ffffff; font-weight: bold; }
+table td { background-color: #eaeaea; color: #444; line-height: 1.2em; word-wrap: break-word; vertical-align: top; }
+
+p#notice { 
+	color:blue; 
+  margin: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}

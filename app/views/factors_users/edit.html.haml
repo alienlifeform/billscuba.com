@@ -1,0 +1,11 @@
+%h1 
+  Survey
+
+= render 'form'
+
+= link_to 'Previous', "/factors_users/#{@factors_user.id - 1}/edit"
+= link_to 'Next', "/factors_users/#{@factors_user.id + 1}/edit"
+
+= link_to 'Show', @factors_user
+\|
+= link_to 'Back', factors_users_path

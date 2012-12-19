@@ -1,0 +1,13 @@
+%h1 
+  Survey Data
+  
+= render 'form'
+
+= link_to 'Previous', "/factors_location/#{@factors_location.id - 1}/edit"
+= link_to 'Next', "/factors_location/#{@factors_location.id + 1}/edit"
+
+#footer
+  %hr
+  = link_to 'Show', @factors_location
+  \|
+  = link_to 'Back', factors_locations_path

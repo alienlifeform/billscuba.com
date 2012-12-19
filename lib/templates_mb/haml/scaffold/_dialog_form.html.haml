@@ -1,0 +1,24 @@
+#admin_dialog_title= (defined? item_id) ? 'Edit this <%= singular_name.underscore.humanize %>' : 'Add a <%= singular_name.underscore.humanize %>'
+#admin_dialog
+  #msg_default.admin_dialog_msg_active
+    = form_for [:admin,@item], :html => { :id => 'edit_form', :class => 'basic_form' }do |f|
+      %table#admin_dialog_form_table
+        <% for attribute in attributes -%>
+          
+        %tr
+          %td 
+            = f.label :<%= attribute.name %>, '<%= singular_name.underscore.humanize %>'
+          %td
+            = f.<%= attribute.field_type %> :<%= attribute.name %>, :id => 'dialog_<%= attribute.name.underscore %>', :placeholder => 'Add <%= attribute.name.underscore.humanize %>'
+        <% end -%>
+
+    .ui-dialog-buttonpane-modified.ui-widget-content.ui-helper-clearfix
+      .ui-dialog-buttonset
+        - if defined? item_id
+          = render :partial => 'admin/assets/buttons/dialog', :locals => { :label => 'DONE', :onclick => "adminDialog.submitForm('edit_form')" }
+        - else
+          = render :partial => 'admin/assets/buttons/dialog', :locals => { :label => 'ADD', :onclick => "adminDialog.submitForm('edit_form')" }
+        = render :partial => 'admin/assets/buttons/dialog', :locals => { :label => 'CANCEL', :onclick => "adminDialog.close()" }
+  = render :partial => 'admin/assets/dialog_success', :locals => { :msg => "The new <%= singular_name.underscore.humanize %> has been added!"}
+  = render :partial => 'admin/assets/dialog_error'
+  = render :partial => 'admin/assets/dialog_loading'

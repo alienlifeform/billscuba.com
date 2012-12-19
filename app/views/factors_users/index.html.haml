@@ -1,0 +1,28 @@
+%h1 Listing factors_users
+
+%p#notice= notice
+
+%table
+  %tr
+    %th Factor ID
+    %th User ID
+    %th Value
+    %th Description
+    %th
+
+  - @factors_users.each do |factors_user|
+    %tr
+      %td= factors_user.factor_id
+      %td= factors_user.user_id
+      %td= factors_user.value
+      %td= factors_user.description
+      %td
+        = link_to 'Show', factors_user
+        \|
+        = link_to 'Edit', edit_factors_user_path(factors_user)
+        \|
+        = link_to 'Destroy', factors_user, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Factors user', new_factors_user_path

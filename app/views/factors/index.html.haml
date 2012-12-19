@@ -1,0 +1,24 @@
+%h1 Listing factors
+
+%table
+  %tr
+    %th Title
+    %th Style
+    %th Show In Survey
+    %th
+
+  - @factors.each do |factor|
+    %tr
+      %td= link_to factor.title, factor
+      %td= factor.style
+      %td= factor.show_in_survey
+      %td
+        = link_to 'Show', factor
+        \|
+        = link_to 'Edit', edit_factor_path(factor)
+        \|
+        = link_to 'Destroy', factor, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Factor', new_factor_path

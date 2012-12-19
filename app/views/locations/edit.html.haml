@@ -1,7 +1,11 @@
-%h1 Editing location
-
+%h1 
+  Editing location:
+  %i= @location.title.present? ? @location.title : @location.city
+  
 = render 'form'
 
-= link_to 'Show', @location
-\|
-= link_to 'Back', locations_path
+#footer
+  %hr
+  = link_to 'Show', @location
+  \|
+  = link_to 'Back', locations_path

@@ -1,0 +1,55 @@
+= render :partial => @current_admin_view_folder + '/header'
+
+#admin_page_content
+  .admin_control_box
+    .admin_control_box_left_column 
+      .admin_control_box_header_area
+        %h3 All <%= plural_name.humanize.downcase %>
+        %a#edit_item_help_btn.help_btn{:href => "javascript:void(0);", :onclick => "admin.toggleHelpMsg('#edit_item_help_msg')", :title => "help"} help
+
+    .admin_control_box_right_column
+      %a#item_add_btn.admin_control_btn.admin_control_btn_right{:href => "#{new_polymorphic_path(@current_admin_item_type.singularize)}"}
+        %div{:title => "Create page"} + CREATE ITEM 
+
+    = form_tag polymorphic_path([:admin,@item]), :remote => true, :method => "get", :id => 'admin_search_form' do
+      = hidden_field_tag "sort_order", @sort_order
+      = hidden_field_tag "sort_by", @sort_by
+      = hidden_field_tag "current_view_folder", @current_view_folder
+      .admin_control_box_full_width_area
+        #edit_item_help_msg.admin_help_msg
+          %p
+            • This is a list of all the items in this category
+        
+        = render :partial => '/admin/assets/errors_and_notices'
+             
+        .hr
+          %hr/
+
+        .admin_control_box_left_column
+          .admin_search_area
+            %fieldset.search.admin_search
+              %input.box.corners_search{:name => "search_params", :placeholder => "search", :type => "text"}/
+              %button.admin_search_btn{:type => "submit", :title => "Submit Search"} GO 
+
+        .admin_control_box_right_column
+          = hidden_field_tag 'filter_by', :CHANGE_THIS_TO_A_FILTER_FIELD
+          = select_tag 'filter_params', options_for_select([['Select a filter','']]), { :class => 'dropkick_filter' }
+
+        .admin_list_nav_area
+          = render :partial => "admin/assets/pagination"
+
+        %table.admin_item_table.admin_item_table_items
+          %thead
+            %tr
+            <% for attribute in attributes -%>
+              
+              %th.admin_table_<%= attribute.name %>_column
+                .admin_table_hr_left <%= attribute.name.underscore.humanize %>
+                %a.admin_sort_column_btn{:href => "javascript:void(0);", :onclick => "admin.sortColumn('<%= attribute.name.underscore %>','admin_search_form')"}
+            <% end %>
+              %th.admin_table_edit_column.admin_table_col_centered EDIT
+          %tbody
+            = render :partial => @current_admin_view_folder + '/list_item', :collection => @items
+
+        .admin_list_nav_area
+          = render :partial => "admin/assets/pagination"

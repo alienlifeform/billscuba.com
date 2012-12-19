@@ -1,0 +1,11 @@
+%h3 
+  Editing factor:
+  %i= @factor.title
+
+= render 'form'
+
+#footer
+  %hr
+  = link_to 'Show', @factor
+  \|
+  = link_to 'Back', factors_path

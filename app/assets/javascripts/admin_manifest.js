@@ -1,0 +1,17 @@
+//= require jquery
+//= require jquery_ujs
+//= require datetime
+//= require jquery.ui
+//= require jquery.tooltip
+//= require spin
+//= require jquery.dropkick
+//= require redactor
+//= require admin/redactor_modals
+//= require admin/admin
+//= require admin/dialog
+//= require admin/list
+//= require admin/text-input-form
+//= require jquery.form
+//= require jquery.lightbox
+//= require jquery.fancybox
+//= require mb_utils

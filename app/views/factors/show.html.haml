@@ -1,0 +1,23 @@
+%h4
+  Factor:
+  = '"' + @factor.title + '"'
+
+%p#notice= notice
+
+#show_cols
+  #col_1_of_3
+    %p
+      %b Title:
+      = @factor.title
+    %p
+      %b Style:
+      = @factor.style
+    %p
+      %b Show in Survey:
+      = @factor.show_in_survey
+
+#footer
+  %hr
+  = link_to 'Edit', edit_factor_path(@factor)
+  \|
+  = link_to 'Back', factors_path

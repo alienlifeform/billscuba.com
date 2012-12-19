@@ -1,0 +1,19 @@
+/* ----- nav_tier_3 (main navigation) ----- */  
+
+/* Dropdown menu */ 
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown { width: 300px; }
+#nav_tier_3 ul#tier_3 li ul.tier_3_dropdown li { width: 300px; height: 27px; }
+
+/* ----- end nav_tier_3 (main navigation) ----- */
+
+
+
+
+/* ----- Home page ----- */ 
+
+#home_right_column_area .home_section_content { padding-top: 12px; }
+ 
+.twitter_description { position: absolute; left: 0; top: 40px; }
+
+/* ----- end Home page ----- */
+
